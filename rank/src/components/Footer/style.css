@@ -1,0 +1,15 @@
+.footer {
+    right: 0;
+    left: 0;
+    background-color: #00171F;
+    text-align: right;
+    cursor: default;
+}
+
+.footer p {
+    font-size: 14px;
+    right: 10px;
+    color: white;
+    margin-right: 10px;
+    font-family: 'Raleway', sans-serif;
+}
