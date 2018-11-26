@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 const url = process.env.NODE_ENV === 'production' ? "/api/v1/" : "http://localhost:8080/api/v1/"
 
@@ -14,7 +14,7 @@ export function loadReviews(){
 
 export function getReview(review_id) {
     return(dispatch) => {
-        axios.get(`${url}review/${review_id}`)
+        axios.get(`${url}reviews/${review_id}`)
         .then((res) => {
             let review = res.data
             dispatch({ type: 'VIEW_REVIEW', review})
