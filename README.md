@@ -7,6 +7,7 @@ Client-side code for Rank, a game review webapp. Project assigned to Lauren Ferr
 1. Technologies
 2. Domain Driven Design Case Study
 3. Architecture case study
+4. Color Palette
 
 ## Technologies
 
@@ -19,3 +20,11 @@ React.JS
 ## Architecture
 
 [Available here](https://docs.google.com/presentation/d/1NH4MO2jpQqeA6e5S5kc4Rm53hldadl02HEhDqEecSks/edit?usp=sharing)
+
+## Color Palette
+
+- Black: #00171F
+- Light-blue: #16BAC5
+- Dark-blue: #002642
+- Green: #0DAB76
+- Orange: #F08700
