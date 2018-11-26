@@ -1,0 +1,55 @@
+header ul {
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.header {
+    background-color: #00171F;
+    color: white;
+}
+
+.header .nav {
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+
+header .logo-wrapper {
+    width: 150px;
+    height: 100%;
+    background-color: #00171F;
+}
+
+header .logo-wrapper img {
+    width: 100%;
+    cursor: pointer;
+}
+
+header .list{
+    display: flex;
+}
+
+header .list li {
+    display: block;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+}
+
+header .item a {
+    width: 2em;
+    min-width: 100px;
+    text-align: center;
+    line-height: 6em;
+    color: white;
+}
+
+header a:hover {
+    background-color: #16BAC5;
+    color: black;
+    cursor: pointer;
+}
