@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = process.env.NODE_ENV === 'production' ? "/api/v1/" : "http://localhost:8080/api/v1/"
+const url = process.env.NODE_ENV === 'production' ? "/api/v1/" : "http://localhost:8899/api/v1/"
 
 export function loadReviews(){
     return(dispatch) => {
