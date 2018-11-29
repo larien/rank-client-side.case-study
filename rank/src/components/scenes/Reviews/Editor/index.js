@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class Editor extends Component {
+export default class ReviewEditor extends Component {
     constructor(){
         super()
         this.state = {
@@ -48,7 +48,7 @@ export default class Editor extends Component {
                             <button type="submit">CREATE REVIEW</button>
                         </div>
                         <div className="info">
-
+                            <p>Hey!</p>
                             <div className="field info-title">
                                 <div>
                                     <h3 htmlFor="title">Title</h3>
