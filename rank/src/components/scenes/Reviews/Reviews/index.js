@@ -18,7 +18,6 @@ export class Reviews extends Component {
       super(props)
 
       this.props.getReviews()
-      console.log("FIRST")
    }
 
   render() {

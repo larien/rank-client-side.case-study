@@ -1,0 +1,52 @@
+.games {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-template-rows: repeat(auto-fill, 150px);
+    grid-row-gap: 2em;
+    grid-column-gap: 2em;
+    padding: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.games .card img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+    object-fit: fill;
+    border-radius: 15px;
+}
+
+.games .card:hover img {
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.games .card {
+    position: relative;
+}
+
+.games .data {
+    margin: 20px;
+}
+
+.games .card .title {
+    text-align: center;
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+.nogames {
+    font-family: 'Raleway', sans-serif;
+    padding: 50px;
+    font-size: 24px;
+    text-align: center;
+}
