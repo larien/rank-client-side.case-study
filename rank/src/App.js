@@ -9,6 +9,7 @@ import Review from './components/scenes/Reviews/Review';
 import ReviewEditor from './components/scenes/Reviews/Editor';
 
 import Games from './components/scenes/Games/Games';
+import Game from './components/scenes/Games/Game';
 
 import Footer from './components/Footer';
 
@@ -23,8 +24,8 @@ class App extends Component {
             <Route exact path="/reviews" component={Reviews} />
             <Route path="/reviews/:id" component={Review} />
             <Route path="/editor/review" component={ReviewEditor} />
-            <Route path="/games" component={Games} />
-            {/* <Route path="/games/:id" component={Game} /> */}
+            <Route exact path="/games" component={Games} />
+            <Route path="/games/:id" component={Game} />
             <Route path="**" component={Reviews} />
           </Switch>
           </div>
