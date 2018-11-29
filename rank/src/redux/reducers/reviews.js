@@ -5,12 +5,12 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch(action.type) {
-        case 'LOAD_REVIEWS':
+        case 'GET_REVIEWS':
             return {
                 ...state,
                 reviews: action.reviews
             }
-        case 'VIEW_REVIEW':
+        case 'GET_REVIEW':
             return {
                 ...state,
                 review: action.review
