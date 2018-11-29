@@ -12,7 +12,7 @@ export default class Header extends Component {
           </h3>
           <ul className="list">
             <li className="item"><a className="link" href="/reviews">Reviews</a></li>
-            <li className="item"><a className="link" href="/editor">Create</a></li>
+            <li className="item"><a className="link" href="/editor/review">New Review</a></li>
             <li className="item"><a className="link" href="/auth">Log In</a></li>
           </ul>
         </nav>
