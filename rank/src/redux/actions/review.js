@@ -18,6 +18,6 @@ export function getReview(review_id) {
         .then((res) => {
             let review = res.data
             dispatch({ type: 'GET_REVIEW', review})
-        }).catch((err => console.log(err)))
+        }).catch((err) => console.log(err))
     }
 }

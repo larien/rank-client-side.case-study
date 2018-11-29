@@ -18,6 +18,6 @@ export function getGame(id) {
         .then((res) => {
             let game = res.data
             dispatch({ type: 'GET_GAME', game})
-        }).catch((err => console.log(err)))
+        }).catch((err) => console.log(err))
     }
 }
