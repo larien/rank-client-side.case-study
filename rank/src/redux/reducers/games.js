@@ -1,19 +1,19 @@
 const initialState = {
-    reviews: [],
-    review: {}
+    games: [],
+    game: {}
 }
 
 export default (state = initialState, action) => {
     switch(action.type) {
-        case 'GET_REVIEWS':
+        case 'GET_GAMES':
             return {
                 ...state,
-                reviews: action.reviews
+                games: action.games
             }
-        case 'GET_REVIEW':
+        case 'GET_GAME':
             return {
                 ...state,
-                review: action.review
+                game: action.game
             }
         default:
             return state
