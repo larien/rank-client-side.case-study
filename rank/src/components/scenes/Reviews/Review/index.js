@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getReview } from '../../../../redux/actions/actions';
+import { getReview } from '../../../../redux/actions/review';
 
 const mapStateToProps = state => {
     return {

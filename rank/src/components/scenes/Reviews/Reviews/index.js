@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { loadReviews } from '../../../../redux/actions/actions'
+import { getReviews } from '../../../../redux/actions/review'
 import { connect } from 'react-redux'
 import './style.css'
 
@@ -10,14 +10,14 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = {
-    loadReviews
+  getReviews
 }
 
 export class Reviews extends Component {
    constructor(props) {
       super(props)
 
-      this.props.loadReviews()
+      this.props.getReviews()
       console.log("FIRST")
    }
 

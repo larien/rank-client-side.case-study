@@ -5,12 +5,12 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch(action.type) {
-        case 'LOAD_GAMES':
+        case 'GET_GAMES':
             return {
                 ...state,
                 games: action.games
             }
-        case 'VIEW_GAME':
+        case 'GET_GAME':
             return {
                 ...state,
                 game: action.game
