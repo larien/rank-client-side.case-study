@@ -24,7 +24,7 @@ class App extends Component {
             <Route exact path="/reviews" component={Reviews} />
             <Route path="/reviews/:id" component={Review} />
             <Route path="/editor/review" component={ReviewEditor} />
-            <Route path="/games" component={Games} />
+            <Route exact path="/games" component={Games} />
             <Route path="/games/:id" component={Game} />
             <Route path="**" component={Reviews} />
           </Switch>

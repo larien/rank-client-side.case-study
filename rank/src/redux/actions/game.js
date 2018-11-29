@@ -16,7 +16,7 @@ export function getGame(game_id) {
     return(dispatch) => {
         axios.get(`${url}games/${game_id}`)
         .then((res) => {
-            let game = res.data
+            let game = res.data.game
             dispatch({ type: 'GET_GAME', game})
         }).catch((err) => console.log(err))
     }
