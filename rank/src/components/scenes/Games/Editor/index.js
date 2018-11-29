@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 
-export default class ReviewEditor extends Component {
+export default class GameEditor extends Component {
     constructor(){
         super()
         this.state = {
-            title: "",
+            name: "",
             cover_image: "",
-            author_nickname: "",
-            reading_time: 0,
-            text_review: "",
+            categories: [""],
+            platforms: [""],
+            publisher: "",
+            rating: ""
         }
         this.handleChange = this.handleChange.bind(this)
     }
@@ -18,21 +19,22 @@ export default class ReviewEditor extends Component {
         this.setState({ [e.target.name]: e.target.value})
     }
 
-    newReview = async e => {
+    newGame = async e => {
         e.preventDefault();
         const _url = process.env.NODE_ENV === 'production' ? "/api/v1/" : "http://localhost:8899/api/v1/"
 
-        const response = await fetch(`${_url}reviews`, {
+        const response = await fetch(`${_url}games`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-              title: this.state.title,
-              cover_image: this.state.cover_image,
-              author_nickname: this.state.author_nickname,
-              reading_time: this.state.reading_time,
-              text_review: this.state.text_review
+            name: this.state.name,
+            cover_image: this.state.cover_image,
+            // categories: this.state.categories,
+            // platforms: this.state.platforms,
+            publisher: this.state.publisher,
+            rating: this.state.rating
             }),
         });
         const body = await response.text();
@@ -42,26 +44,26 @@ export default class ReviewEditor extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.newReview} onChange={this.handleChange} className="create-review">
+                <form onSubmit={this.newGame} onChange={this.handleChange} className="create-game">
                     <div  className="grid-container">
                         <div className="submitbutton">
-                            <button type="submit">CREATE REVIEW</button>
+                            <button type="submit">CREATE GAME</button>
                         </div>
                         <div className="info">
-                            <div className="field info-title">
+                            <div className="field info-name">
                                 <div>
-                                    <h3 htmlFor="title">Title</h3>
+                                    <h3 htmlFor="name">Name</h3>
                                 </div>
                                 <div>
                                     <input
                                         type="text"
-                                        name="title"
-                                        id="title"
-                                        value={this.state.title}
+                                        name="name"
+                                        id="name"
+                                        value={this.state.name}
                                         minLength="1"
                                         maxLength="50"
                                         size="50"
-                                        onChange={e => this.setState({ title: e.target.value })}
+                                        onChange={e => this.setState({ name: e.target.value })}
                                     />
                                 </div>
                             </div>
@@ -84,56 +86,38 @@ export default class ReviewEditor extends Component {
                                 </div>
                             </div>
 
-                            <div className="field info-reading-time">
+                            <div className="field info-publisher">
                                 <div>
-                                    <h3 htmlFor="reading_time">Reading Time</h3> 
+                                    <h3 htmlFor="publisher">Publisher</h3> 
                                 </div>
                                 <div>
                                     <input
-                                        type="number"
-                                        name="reading_time"
-                                        id="reading_time"
-                                        min="1"
-                                        max="50"
-                                        size="1"
-                                        value={this.state.reading_time}
-                                        onChange={e => this.setState({ reading_time: e.target.value })}
+                                        type="text"
+                                        name="publisher"
+                                        id="publisher"
+                                        value={this.state.publisher}
+                                        minLength="1"
+                                        maxLength="50"
+                                        size="50"
+                                        onChange={e => this.setState({ publisher: e.target.value })}
                                     />
                                 </div>
                             </div>
 
-                            <div className="field info-author-nickname">
+                            <div className="field info-rating">
                                 <div>
-                                    <h3 htmlFor="author_nickname">Author Nickname</h3> 
+                                    <h3 htmlFor="rating">Rating</h3> 
                                 </div>
                                 <div>
                                     <input
                                         type="text"
-                                        name="author_nickname"
-                                        id="author_nickname"
-                                        value={this.state.author_nickname}
+                                        name="rating"
+                                        id="rating"
+                                        value={this.state.rating}
                                         minLength="1"
-                                        max="50"
-                                        size="50"
-                                        onChange={e => this.setState({ author_nickname: e.target.value })}
-                                    />
-                                </div>
-                            </div>
-                            
-                            <div className="field info-text-review">
-                                <div>
-                                    <h3 htmlFor="text_review">Review</h3>
-                                </div>
-                                <div>
-                                    <input
-                                        type="text"
-                                        name="text_review"
-                                        id="text_review"
-                                        value={this.state.text_review}
-                                        minLength="1"
-                                        maxLength="2500"
-                                        size="200"
-                                        onChange={e => this.setState({ text_review: e.target.value })}
+                                        max="5"
+                                        size="5"
+                                        onChange={e => this.setState({ rating: e.target.value })}
                                     />
                                 </div>
                             </div>
