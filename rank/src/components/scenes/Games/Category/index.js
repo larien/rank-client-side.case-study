@@ -1,27 +1,22 @@
 import React, { Component } from 'react'
-import { getGames } from '../../../../redux/actions/game'
-import { getCategories } from '../../../../redux/actions/categories'
+import { getGamesByCategory } from '../../../../redux/actions/categories'
 import { connect } from 'react-redux'
-import './style.css'
 
 const mapStateToProps = state => {
     return ({
-        games: state.games.games,
-        categories: state.categories.categories
+        games: state.categories.gamesByCategory
     })
 }
 
 const mapDispatchToProps = {
-    getGames,
-    getCategories
+    getGamesByCategory
 }
 
-export class Games extends Component {
+export class GamesByCategory extends Component {
    constructor(props) {
       super(props)
 
-      this.props.getGames()
-      this.props.getCategories()
+      this.props.getGamesByCategory(this.props.match.params.name)
    }
 
   render() {
@@ -38,20 +33,8 @@ export class Games extends Component {
           </div>
         </div>
       )
-
-      const categories = this.props.categories.map((category)=>
-      <div className="category">
-          <div className="data">
-            <button className="title"><a href={`/games/categories/${category}`}>{category}</a></button>
-          </div>
-        </div>
-      )
-
     return (
     <div>
-      <div className="categories">
-        { categories }
-      </div>
         <div className={games.length === 0 ? '' : 'hidden'}><p className="nogames">There are no games here!</p>
         <p className="nogames">Why don't you try to create a new one? Up there!</p></div>
       <div className="games">
@@ -62,4 +45,4 @@ export class Games extends Component {
   }
 }
 
-export default connect(mapStateToProps,mapDispatchToProps)(Games);
+export default connect(mapStateToProps,mapDispatchToProps)(GamesByCategory);

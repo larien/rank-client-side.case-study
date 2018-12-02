@@ -11,6 +11,7 @@ import ReviewEditor from './components/scenes/Reviews/Editor';
 import Games from './components/scenes/Games/Games';
 import Game from './components/scenes/Games/Game';
 import GameEditor from './components/scenes/Games/Editor';
+import Category from './components/scenes/Games/Category';
 
 import Footer from './components/Footer';
 
@@ -26,8 +27,9 @@ class App extends Component {
             <Route path="/reviews/:id" component={Review} />
             <Route exact path="/editor/review" component={ReviewEditor} />
             <Route exact path="/games" component={Games} />
-            <Route path="/games/:id" component={Game} />
+            <Route path="/games/game/:id" component={Game} />
             <Route exact path="/editor/game" component={GameEditor} />
+            <Route path="/games/categories/:name" component={Category} />
             <Route path="**" component={Reviews} />
           </Switch>
           </div>
