@@ -6,8 +6,9 @@ Client-side code for Rank, a game review webapp. Project assigned to Lauren Ferr
 
 1. Technologies
 2. Domain Driven Design Case Study
-3. Architecture case study
+3. Architecture Case Study
 4. Color Palette
+5. Release Status
 
 ## Technologies
 
@@ -28,3 +29,9 @@ React.JS
 - Dark-blue: #002642
 - Green: #0DAB76
 - Orange: #F08700
+
+## Release Status
+
+v1.0.0 - Games Review page
+
+v2.0.0 - Game page
