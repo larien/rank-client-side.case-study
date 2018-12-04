@@ -23,6 +23,9 @@ export default class Header extends Component {
             {isLoggedIn() && 
               <li className="item"><a className="link" href="/editor/review">New Review</a></li>
             }
+            {isLoggedIn() && 
+              <li className="item"><a className="link" href="/unpublished">To Approve</a></li>
+            }
             <li className="item"><a className="link" href="/games">Games</a></li>
             {isLoggedIn() && 
               <li className="item"><a className="link" href="/editor/game">New Game</a></li>
