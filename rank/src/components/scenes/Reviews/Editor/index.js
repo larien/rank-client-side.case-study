@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React,  { Component } from 'react';
 
 export default class ReviewEditor extends Component {
     constructor(){
@@ -25,7 +25,8 @@ export default class ReviewEditor extends Component {
         const response = await fetch(`${_url}reviews`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem("token")
           },
           body: JSON.stringify({
               title: this.state.title,

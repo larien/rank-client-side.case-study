@@ -1,0 +1,38 @@
+.signup-form {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:22em;
+    margin-top: -11em;
+    margin-left: -15em;
+    border: 3px solid #F91358;
+    border-radius: 12px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #F91358;
+}
+
+.signup-form h1 {
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    cursor: default;
+}
+
+.signup-form .fields {
+    padding: 10px 30px;
+    background-color: white;
+
+}
+
+.signup-form .fields input {
+    width: 90%;
+}
+
+.signup-form .fields .but {
+    text-align: center;
+}
+
+.signup-form .fields button {
+    width: 200px;
+}
