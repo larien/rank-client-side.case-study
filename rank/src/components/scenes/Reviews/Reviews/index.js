@@ -37,7 +37,7 @@ export class Reviews extends Component {
         <div className={reviews.length === 0 ? '' : 'hidden'}><p className="noreviews">There are no reviews here!</p>
         <p className="noreviews">Why don't you try to create a new one? Up there!</p></div>
       <div className="reviews">
-        { reviews }
+          { reviews }
       </div>
     </div>
     )
