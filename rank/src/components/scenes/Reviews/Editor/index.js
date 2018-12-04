@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import auth0Client from '../../../../auth/Auth';
 
 export default class ReviewEditor extends Component {
     constructor(){
@@ -25,7 +26,8 @@ export default class ReviewEditor extends Component {
         const response = await fetch(`${_url}reviews`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${auth0Client.getIdToken()}`
           },
           body: JSON.stringify({
               title: this.state.title,

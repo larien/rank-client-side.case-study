@@ -1,0 +1,35 @@
+body, div {
+    margin: 0;
+    padding: 0;
+}
+
+.auth {
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    width:30em;
+    height:18em;
+    margin-top: -9em;
+    margin-left: -15em;
+    border: 3px solid #F91358;
+    border-radius: 12px;
+}
+
+.auth a {
+    color: white;
+}
+
+.auth {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 1.5fr 0.7fr;
+    grid-template-areas: ". . . ." ". buttons buttons ." ". . . .";
+  }
+  
+.auth .buttons {
+    grid-area: buttons;
+}
+
+.auth button {
+    width: 200px;
+}
