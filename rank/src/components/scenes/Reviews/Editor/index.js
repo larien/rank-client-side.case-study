@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import auth0Client from '../../../../auth/Auth';
+import React,  { Component } from 'react';
 
 export default class ReviewEditor extends Component {
     constructor(){
@@ -27,7 +26,7 @@ export default class ReviewEditor extends Component {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${auth0Client.getIdToken()}`
+            'Authorization': localStorage.getItem("token")
           },
           body: JSON.stringify({
               title: this.state.title,
