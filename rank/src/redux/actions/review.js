@@ -14,10 +14,24 @@ export function getReviews(){
 
 export function getReview(review_id) {
     return(dispatch) => {
-        axios.get(`${url}reviews/${review_id}`)
+        axios.get(`${url}reviews/review/${review_id}`)
         .then((res) => {
             let review = res.data
             dispatch({ type: 'GET_REVIEW', review})
+        }).catch((err) => console.log(err))
+    }
+}
+
+export function getUnpublishedReviews(){
+    return(dispatch) => {
+        axios.get(`${url}reviews/unpublished`, {
+            headers: {
+                Authorization: localStorage.getItem("token")
+            }
+        })
+        .then((res)=> {
+            let reviews = res.data
+            dispatch({type: 'GET_UNPUBLISHED_REVIEWS', reviews})
         }).catch((err) => console.log(err))
     }
 }
