@@ -1,5 +1,6 @@
 const initialState = {
     reviews: [],
+    unpublished_reviews: [],
     review: {}
 }
 
@@ -9,6 +10,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 reviews: action.reviews
+            }
+        case 'GET_UNPUBLISHED_REVIEWS':
+            return {
+                ...state,
+                unpublished_reviews: action.reviews
             }
         case 'GET_REVIEW':
             return {
