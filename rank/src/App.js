@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header';
 
 import Reviews from './components/scenes/Reviews/Reviews';
+import Unpublished from './components/scenes/Reviews/Unpublished';
 import Review from './components/scenes/Reviews/Review';
 import ReviewEditor from './components/scenes/Reviews/Editor';
 
@@ -27,6 +28,7 @@ class App extends Component {
           <div className="Content">
             <Switch>
               <Route exact path="/reviews" component={Reviews} />
+              <Route exact path="/unpublished" component={Unpublished} />
               <Route path="/reviews/:id" component={Review} />
               <Route exact path="/editor/review" component={ReviewEditor} />
               <Route exact path="/games" component={Games} />
