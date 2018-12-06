@@ -26,9 +26,6 @@ export class Reviews extends Component {
           <img src={review.cover_image} alt="Thumb" />
           <div className="data">
             <h3 className="title"><a href={`/reviews/${review.id}`}>{review.title}</a></h3>
-            <div className="body">
-                <p className="average-rating">Average Rating: { review.average_rating }</p>
-            </div>
           </div>
         </div>
       )
