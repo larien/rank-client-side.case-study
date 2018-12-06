@@ -29,7 +29,7 @@ export class Games extends Component {
       <div className="card">
           <img src={game.cover_image} alt="Thumb" />
           <div className="data">
-            <h3 className="title"><a href={`/games/${game.id}`}>{game.name}</a></h3>
+            <h3 className="title"><a href={`/games/game/${game.id}`}>{game.name}</a></h3>
             <div className="body">
                 <p>Categories: { game.categories }</p>
                 <p className="platforms">Platforms: { game.platforms }</p>
