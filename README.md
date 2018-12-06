@@ -37,3 +37,5 @@ v1.0.0 - Games Review page
 v2.0.0 - Game page
 
 v3.0.0 - Categories page
+
+v4.0.0 - Authentication
