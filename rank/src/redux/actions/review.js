@@ -20,7 +20,7 @@ export function getReview(review_id) {
     return(dispatch) => {
         axios.get(`${url}reviews/review/${review_id}`)
         .then((res) => {
-            let review = res.data
+            let review = res.data.review
             dispatch({ type: 'GET_REVIEW', review})
         }).catch((err) => console.log(err))
     }
