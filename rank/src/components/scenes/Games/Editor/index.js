@@ -85,7 +85,8 @@ export default class GameEditor extends Component {
         const response = await fetch(`${_url}games`, {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem("token")
           },
           body: JSON.stringify({
             name: this.state.name,
