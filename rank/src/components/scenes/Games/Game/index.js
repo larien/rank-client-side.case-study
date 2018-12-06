@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getGame } from '../../../../redux/actions/game';
+import './Game.css';
 
 const mapStateToProps = state => {
     return {
@@ -23,19 +24,17 @@ class Game extends Component {
     }
 
     render() {
-        const { name, cover_image, platforms, categories, release_date, rating, score, publisher } = this.props._game
+        const { name, cover_image, platforms, categories, rating, score, publisher } = this.props._game
         console.log(this.props._game)
         return (
         <div className="game">
-        <p>HEy!</p>
-            <div className="thumbnail">
+            <div className="gamethumbnail">
             <h3 className="info">{name}</h3>
             <img src={cover_image} alt="Thumb" />
             </div>
             <div>
                 <p>Platforms: {platforms}</p>
                 <p>Categories: {categories}</p>
-                <p>Release Date: {release_date}</p>
                 <p>Rating: {rating}</p>
                 <p>Score: {score}</p>
                 <p>Publisher: {publisher}</p>

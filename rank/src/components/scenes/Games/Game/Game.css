@@ -1,0 +1,35 @@
+.game {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 1fr;
+    grid-template-areas: "gamethumbnail" "gameinfo";
+  }
+   
+.game .gamethumbnail {
+    grid-area: gamethumbnail;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+  
+.gameinfo { grid-area: gameinfo; }
+  
+.gamethumbnail img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.gamethumbnail .title {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    background: rgba(32, 4, 28, 0.5);
+    font-size: 24px;
+}
