@@ -17,8 +17,11 @@ export function getGamesByCategory(category){
         axios.get(`${url}games/categories/${category}`)
         .then((res)=> {
             let gamesByCategory = res.data
-            console.log(res)
-            dispatch({type: 'GET_GAMES_BY_CATEGORY', gamesByCategory})
+            if (gamesByCategory !== null){
+                dispatch({type: 'GET_GAMES_BY_CATEGORY', gamesByCategory})
+            } else {
+                dispatch({type: 'GET_UNPUBLISHED_REVIEWS', gamesByCategory: ["teste"]}) // TODO
+            }
         }).catch((err) => console.log(err))
     }
 }
